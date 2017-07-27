@@ -9,7 +9,7 @@ should display the valid and invalid string.
 6. DO remember to annotate with proper datatype the parameters and function
 
 ## Solution
-Since in point 5 it is mentioned to display both Valid as well as invalid messaged in output, I have called the method 2 times during the loading. If the user is adult it shows the message in header section elese in footer section
+Since in point 5 it is mentioned to display both valid as well as invalid messaged in output, I have called the method 2 times during the loading. If the user is adult it shows the message in header section else in footer section
 
 ## Output
 1. Screenshot_output.png - captured the running output in browser
