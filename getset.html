@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GetSet Demo</title>
+    <script type="application/javascript" src="getset.js"></script>
+    <script>
+        function myFunction(name, year, flag) {
+            var gs = new GetSetDemo();
+            gs.userName = name;
+            gs.year = year;
+
+            if (gs.isUserValid()) {
+                document.getElementById("valid").innerHTML = gs.userName;
+                if(document.getElementById("invalid").innerHTML)
+                    document.getElementById("invalid").innerHTML = '-';
+            }
+            else {
+                document.getElementById("invalid").innerHTML = gs.userName;
+                    if(document.getElementById("valid").innerHTML && flag != 1)
+                        document.getElementById("valid").innerHTML = '-';
+            }
+        }
+
+        function onLoad() {
+            myFunction('Demo', '1990', 1);
+            myFunction('Guest', '2012', 1);
+        }
+
+    </script>
+    <style>
+        header{
+            font-size: 26px;
+            background-color: lightseagreen;
+            height:20%;
+       }
+        footer{
+            font-size: 20px;
+            background-color: lightsalmon;
+            height: 20%;
+        }
+        section{
+            margin: 20px;
+        }
+        input{
+            margin: 5px;
+        }
+        label{
+            margin: 5px;
+        }
+        button{
+            margin: 5px;
+            border-radius: 2px;
+        }
+</style>
+
+</head>
+
+<body onload="onLoad();">
+    <header id="header">
+        <div id="valid"></div>
+    </header>
+    <section id="main">
+        <div>
+            <label>Enter Name:</label><br>
+            <input type="text" placeholder="UserName" id="userName" value="Guest"><br>
+            <label>Enter Year:</label><br>
+            <input type="text" placeholder="BirthYear" id="birthYear" value="2012"><br>
+            <button onclick="myFunction(document.getElementById('userName').value, document.getElementById('birthYear').value)" ;>Check Validity</button>
+        </div>
+    </section>
+    <footer id="footer">
+        <div id="invalid"></div>
+    </footer>
+</body>
+
+</html>
